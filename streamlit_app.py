@@ -17,5 +17,6 @@ my_fruit_list = my_fruit_list.set_index('Fruit')
 
 # Lets put a picklist here so that the customers can pick the fruits they would like.
 selected_fruits = a.multiselect("Pick some fruits:", options=list(my_fruit_list.index), default=["Avocado", "Strawberries"])
+fruits_to_show = my_fruit_list.loc[selected_fruits]
 #Display in the tabular format
-a.dataframe(my_fruit_list)
+a.dataframe(fruits_to_show)

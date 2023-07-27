@@ -15,6 +15,6 @@ import pandas
 my_fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
 
 #Lets put a picklist here so that the customers can pick the fruits they would like.
-streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index)
+streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index))
 #Display in the tabular format
 streamlit.dataframe(my_fruit_list)
